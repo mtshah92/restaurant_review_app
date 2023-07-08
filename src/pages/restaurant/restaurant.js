@@ -2,9 +2,13 @@ import { useParams } from "react-router";
 import { restaurantsData } from "../../db/db";
 import "./resturant.css";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { ReviewContext } from "../../context/reviewContext";
+import { ReviewModal } from "../../modal/reviewModal";
 
 export const Restaurant = () => {
   const { restid } = useParams();
+  const { showReview, setReview } = useContext(ReviewContext);
 
   const selectedResturant = restaurantsData.find((item) => item.id == restid);
 
@@ -16,6 +20,7 @@ export const Restaurant = () => {
   return (
     <>
       <div className="resturant-page">
+        {showReview && <ReviewModal />}
         <div className="back">
           <p>
             <NavLink to="/">Back</NavLink>
@@ -31,7 +36,12 @@ export const Restaurant = () => {
               <p>Average Rating: {avgRating}</p>
             </div>
             <div>
-              <button className="add-review-btn">Add Review</button>
+              <button
+                className="add-review-btn"
+                onClick={() => setReview(true)}
+              >
+                Add Review
+              </button>
             </div>
           </div>
           <hr />

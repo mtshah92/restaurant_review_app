@@ -1,4 +1,5 @@
-export const reviewModal = () => {
+import "./reviewModal.css";
+export const ReviewModal = () => {
   return (
     <div className="review-modal">
       <p>Close</p>
@@ -16,9 +17,10 @@ export const reviewModal = () => {
         </select>
       </div>
 
-      <div className="comment"></div>
-      <label for="comment-input">Comment</label>
-      <input type="text" id="comment-input" />
+      <div className="comment">
+        <label for="comment-input">Comment</label>
+        <input type="text" id="comment-input" />
+      </div>
 
       <button>Submit</button>
     </div>

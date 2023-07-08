@@ -1,0 +1,14 @@
+.review-modal {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  width: max-content;
+  height: max-content;
+  background-color: #8294c4;
+  padding: 0.5rem;
+}
