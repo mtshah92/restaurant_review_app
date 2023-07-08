@@ -1,0 +1,55 @@
+.resturant-page {
+  display: flex;
+  /* flex-direction: column; */
+  line-height: 50%;
+}
+.back {
+  margin: 1rem;
+}
+
+.resturant-data {
+  margin-left: 15rem;
+  margin-right: 2rem;
+  width: 60%;
+}
+.resturant-data-header {
+  display: flex;
+  justify-content: space-between;
+}
+.rating-box {
+  padding: 0.5rem;
+  border: 1px solid black;
+  background-color: green;
+  color: yellow;
+  border-radius: 0.5rem;
+}
+
+.add-review-btn {
+  margin-top: 5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #ef4f4f;
+}
+.add-review-btn:hover {
+  background-color: #c9485b;
+}
+.reviewer-img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.review-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reviewer-name-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
